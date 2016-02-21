@@ -238,7 +238,7 @@ class Family(models.Model):
 
 
 class Genus(models.Model):
-    genus_id = models.BigIntegerField(db_column='GENUS_ID', blank=True, null=True)  # Field name made lowercase.
+    genus_id = models.BigIntegerField(db_column='GENUS_ID', blank=True, primary_key=True)  # Field name made lowercase.
     genus = models.TextField(db_column='GENUS', blank=True, null=True)  # Field name made lowercase.
     family_id = models.BigIntegerField(db_column='FAMILY_ID', blank=True, null=True)  # Field name made lowercase.
     created_by = models.TextField(db_column='CREATED_BY', blank=True, null=True)  # Field name made lowercase.
@@ -304,7 +304,7 @@ class RedlistSpecies(models.Model):
 
 
 class Species(models.Model):
-    species_id = models.BigIntegerField(db_column='SPECIES_ID', blank=True, null=True)  # Field name made lowercase.
+    species_id = models.BigIntegerField(db_column='SPECIES_ID', blank=True, primary_key=True)  # Field name made lowercase.
     species = models.TextField(db_column='SPECIES', blank=True, null=True)  # Field name made lowercase.
     genus_id = models.BigIntegerField(db_column='GENUS_ID', blank=True, null=True)  # Field name made lowercase.
     mapped = models.TextField(db_column='MAPPED', blank=True, null=True)  # Field name made lowercase.
