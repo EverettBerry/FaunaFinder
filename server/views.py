@@ -6,7 +6,7 @@ from models import EcoregionSpecies, Genus, Species
 
 
 def index(request):
-    return render(request, 'tagalong/index.html')
+    return render(request, 'web/index.html')
 
 
 def species(request, eco_code):
@@ -32,7 +32,9 @@ def species(request, eco_code):
             uri = str(gbif['usageKey']) + '/media'
             r = requests.get(url + uri)
             try:
-                imgs['imgs'].append(r.json()['results'][0]['identifier'])
+                im = r.json()['results'][0]['identifier']
+                if im not in imgs['imgs']:
+                    imgs['imgs'].append(im)
             except:
                 pass
         except:

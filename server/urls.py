@@ -17,6 +17,6 @@ from django.conf.urls import url
 from views import index, species
 
 urlpatterns = [
-    url(r'^index/', index),
+    url(r'^index/$', index),
     url(r'^species/(?P<eco_code>\w+)$', species),
 ]
