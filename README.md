@@ -1,2 +1,1 @@
-# HackIllinois2016-Server
-Serving dank favicons since 1993.
+HackIllinois 2016 web app: ~75% complete
